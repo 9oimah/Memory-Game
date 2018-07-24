@@ -54,7 +54,7 @@ h1 {
 .deck .card {
     height: 125px;
     width: 125px;
-    background: #2e3d49;
+    background: #00a5d3;
     font-size: 0;
     color: #ffffff;
     border-radius: 8px;
@@ -67,7 +67,7 @@ h1 {
 
 .deck .card.open {
     transform: rotateY(0);
-    background: #02b3e4;
+    background: #036b88;
     cursor: default;
 }
 
@@ -77,7 +77,7 @@ h1 {
 
 .deck .card.match {
     cursor: default;
-    background: #cfcf00;
+    background: #e7d67f;
     font-size: 33px;
 }
 
