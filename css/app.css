@@ -153,6 +153,13 @@ h1 {
     color: #00a5d3;
 }
 
+.close {
+    color: #000;
+    float: right;
+    font-size: 20px;
+    font-weight: bold;
+}
+
 #play-again {
     font-size: 1vw;
     font-weight: 400;
@@ -162,11 +169,4 @@ h1 {
 	width: 75%;
     max-width: 100%;
     cursor: pointer;
-}
-
-.close {
-    color: #000;
-    float: right;
-    font-size: 20px;
-    font-weight: bold;
 }
