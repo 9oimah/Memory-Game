@@ -6,7 +6,7 @@
     <title>Matching Game</title>
     <meta name="description" content="">
     <link rel="stylesheet prefetch" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css">
-    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Coda">
+    <link rel="stylesheet prefetch" href="https://fonts.googleapis.com/css?family=Muli">
     <link rel="stylesheet" href="css/app.css">
     <link rel="shortcut icon" type="image/png" href="img/memory.png"/>
 </head>
@@ -19,15 +19,17 @@
 
         <section class="score-panel">
         	<ul class="stars">
-        		<li><i class="fas fa-star"></i></li>
-        		<li><i class="fas fa-star"></i></li>
-        		<li><i class="fas fa-star"></i></li>
+        		<i class="fas fa-star"></i>
+				<i class="fas fa-star"></i>
+        		<i class="fas fa-star"></i>
         	</ul>
 
-        	<span class="moves">3</span> Moves
+        	<span class="moves"></span> Move(s)
+			
+			<div class="timer"></div>
 
-            <div class="restart">
-        		<i class="fas fa-repeat"></i>
+            <div class="restart" onclick="restart()">
+        		<i class="fas fa-redo"></i>
         	</div>
         </section>
 
@@ -38,7 +40,7 @@
             <li class="card">
                 <i class="fas fa-heart"></i>
             </li>
-            <li class="card match">
+            <li class="card">
                 <i class="fas fa-burn"></i>
             </li>
             <li class="card">
@@ -47,7 +49,7 @@
             <li class="card">
                 <i class="fas fa-stethoscope"></i>
             </li>
-            <li class="card match">
+            <li class="card">
                 <i class="fas fa-burn"></i>
             </li>
             <li class="card">
@@ -68,7 +70,7 @@
             <li class="card">
                 <i class="fas fa-dna"></i>
             </li>
-            <li class="card open show">
+            <li class="card">
                 <i class="fas fa-tablets"></i>
             </li>
             <li class="card">
@@ -82,7 +84,19 @@
             </li>
         </ul>
     </div>
-
+  
+    <div id="winMessage" class="modal">
+		<div class="modal-content">
+			<a class="close" href=# onclick="playAgain()">x</a>
+			<h2>Congratulations!!! <i class="fa fa-trophy"></i></h2>
+			<p>You won!!!</p>
+			<p>Stars: <span id="playerRating"></span></p>
+			<p>Moves: <span id="playerMoves"></span></p>
+			<p><span id="playerTime"></span></p>
+			<button id="play-again" onclick="playAgain()">Do better!</button>
+		</div>
+	</div>
+	
     <script src="js/app.js"></script>
 </body>
 </html>
