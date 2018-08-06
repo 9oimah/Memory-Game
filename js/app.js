@@ -84,6 +84,25 @@ function Timer(){
 	}, 1000);
 }
 
+//Keeps track of moves and changes rating
+function movesCounter(){
+	moves = moves + 1;
+	allMoves.innerHTML = moves;
+	
+	if(moves == 1){
+		seconds = 0;
+		minutes = 0;
+		hours = 0;
+		Timer();
+	}
+	else if (moves > 10 && moves < 21) {
+		stars.innerHTML = '<i class="fas fa-star"></i><i class="fas fa-star"></i>';
+	}
+	else if (moves >= 21) {
+		stars.innerHTML = '<i class="fas fa-star"></i>';
+	}
+}
+
 //Main game logic function
 function matchLogic(event) {
 	this.classList.toggle('open');
@@ -121,25 +140,6 @@ function matchLogic(event) {
 				displayedCards = [];
 			},1000);
 		}
-	}
-}
-
-//Keeps track of moves and changes rating
-function movesCounter(){
-	moves = moves + 1;
-	allMoves.innerHTML = moves;
-	
-	if(moves == 1){
-		seconds = 0;
-		minutes = 0;
-		hours = 0;
-		Timer();
-	}
-	else if (moves > 10 && moves < 21) {
-		stars.innerHTML = '<i class="fas fa-star"></i><i class="fas fa-star"></i>';
-	}
-	else if (moves >= 21) {
-		stars.innerHTML = '<i class="fas fa-star"></i>';
 	}
 }
 
