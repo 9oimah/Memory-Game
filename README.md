@@ -1,6 +1,6 @@
 # Memory Game
 
-This is a complete browser-based card matching game. Play it [here.](http://noimat.me/Memory-Game/)
+This is a complete browser-based card matching game. Play it [here.](http://noimat.design/Memory-Game/)
 
 # How to play
 
